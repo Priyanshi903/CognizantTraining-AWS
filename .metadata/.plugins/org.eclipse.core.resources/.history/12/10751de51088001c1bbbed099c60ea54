@@ -1,0 +1,41 @@
+package com.cognizant.truyum.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cognizant.truyum.dao.CartDao;
+import com.cognizant.truyum.exception.CartEmptyException;
+import com.cognizant.truyum.exception.MenuItemNotFoundException;
+import com.cognizant.truyum.model.Cart;
+import com.cognizant.truyum.model.User;
+
+@Service
+public class CartService {
+	
+	@Autowired
+	private CartDao cartDao;
+	
+	
+	public Cart getCart(User user) {
+		return(cartDao.findByUser(user));
+	}
+
+//	public Cart getCartForUser(String userid)  {
+//		
+//		
+//		
+//	}
+
+//	public Cart addcartItem(String userid, long menuItemId) throws MenuItemNotFoundException {
+//		return cartDao.save(null);
+//	}
+//
+//	public void removeCartItem(String userId, long menuItemId) throws MenuItemNotFoundException {
+//		
+//		cartDao.removeCartItem(userId, menuItemId);
+//		
+//	}
+	
+	
+
+}

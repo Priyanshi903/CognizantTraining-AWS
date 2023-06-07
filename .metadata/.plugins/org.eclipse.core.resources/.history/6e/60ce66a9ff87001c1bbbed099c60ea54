@@ -1,0 +1,20 @@
+package com.cognizant.truyum.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cognizant.truyum.model.User;
+
+@RestController
+@RequestMapping("/users")
+public class UserController {
+	
+	@PostMapping("/add-user")
+	public User addUser(@RequestBody User user) {
+		menuItemService.addUser(user);
+	}
+	
+
+}

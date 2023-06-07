@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\aws\authorization-service"/>
+			<item value="C:\aws\authorization-service-0"/>
+			<item value="C:\aws\truyum-client"/>
+			<item value="C:\aws\Spring-Security"/>
+			<item value="C:\aws\SpringSecurity"/>
+			<item value="C:\aws\truyum"/>
+			<item value="C:\aws\netflix-eureka-server"/>
+			<item value="C:\aws\api-gateway"/>
+			<item value="C:\aws\truyum-spring-mvc"/>
+			<item value="C:\SpringRestfulServices\truyum"/>
+			<item value="C:\aws\employeeMvcClient"/>
+			<item value="C:\aws\EmployeeRestApp"/>
+			<item value="C:\aws\AWSCICD"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

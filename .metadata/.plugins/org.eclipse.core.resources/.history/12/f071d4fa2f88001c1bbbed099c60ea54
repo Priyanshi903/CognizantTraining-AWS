@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  emp_service:
+    build: .
+    restart: always
+    ports: 
+      - 7575:7575

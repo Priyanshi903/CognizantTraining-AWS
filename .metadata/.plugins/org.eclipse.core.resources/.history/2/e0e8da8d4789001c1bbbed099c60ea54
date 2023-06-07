@@ -1,0 +1,46 @@
+package com.cognizant.truyum.feign;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.cognizant.truyum.model.MenuItem;
+
+@FeignClient(name="truyum-rest", url="localhost:8080")
+public interface AdminProxy {
+	
+	@GetMapping("/menu-items/admin")
+	public List<MenuItem> getAllMenuItems();
+	
+	@GetMapping("/menu-items/admin/{id}")
+	public MenuItem getMenuItem(@PathVariable long id);
+	
+	@PutMapping("/menu-items/admin")
+	public ResponseEntity<MenuItem> modifyMenuItem(@RequestBody MenuItem menuItem);
+	
+	@PostMapping("/menu-items/admin")
+	public ResponseEntity<Object> saveMenuItem(@RequestBody MenuItem menuItem);
+	
+	/* customer */
+	
+	@GetMapping("/menu-items")
+	public List<MenuItem> getAllMenuItemsCustomer();
+	
+	@PostMapping("/carts/{userId}/{menuItemId}")
+	public ResponseEntity<Object> addCartItem(@PathVariable long userId,@PathVariable long menuItemId);
+	
+	@GetMapping("/carts/{userId}")
+	public List<MenuItem> getAllCartItems(@PathVariable long userId);
+	
+	@DeleteMapping("/carts/{userId}/{menuItemId}")
+	public void deleteCartItem(@PathVariable long userId,@PathVariable long menuItemId);
+	
+
+}

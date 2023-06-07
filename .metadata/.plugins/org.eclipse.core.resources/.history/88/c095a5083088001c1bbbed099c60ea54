@@ -1,0 +1,28 @@
+server:
+  port: 7575
+spring:  application:    name: api-gateway
+  cloud:    gateway:      routes:      - id: exchangeservice
+        uri: lb://currency-exchange-service
+        predicates:
+        - Path=/currency-exchange-service/**
+      - id: conversionservice
+        uri: lb://currency-conversion-service
+        predicates:
+        - Path=/currency-converter/**
+      - id: account-service
+        uri: lb://account-service
+        predicates:
+        - Path=/accounts/**
+      - id: loan-service
+        uri: lb://loan-service
+        predicates:
+        - Path=/loans/**
+      - id: employeeservice
+        uri: lb://employee-service
+        predicates:
+        - Path=/**
+        
+eureka:  client:    service-url:      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+      

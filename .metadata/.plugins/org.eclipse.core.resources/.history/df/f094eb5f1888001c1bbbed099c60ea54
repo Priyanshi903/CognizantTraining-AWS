@@ -1,0 +1,53 @@
+package com.cognizant.truyum.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cognizant.truyum.dao.CartDao;
+import com.cognizant.truyum.dao.MenuItemDao;
+import com.cognizant.truyum.dao.UserDao;
+import com.cognizant.truyum.exception.MenuItemNotFoundException;
+import com.cognizant.truyum.model.Cart;
+import com.cognizant.truyum.model.MenuItem;
+import com.cognizant.truyum.model.User;
+
+@Service
+public class CartService {
+	
+	@Autowired
+	private CartDao cartDao;
+	
+	@Autowired
+	private UserDao userDao;
+	
+	@Autowired
+	private MenuItemDao menuItemDao;
+	
+	
+	public Cart getCart(User user) {
+		return(cartDao.findByUser(user));
+	}
+
+	public Cart getCartForUser(String userid)  {
+		User user = userDao.findById(userid).get();
+		return cartDao.findByUser(user);
+	}
+
+	public Cart addcartItem(String userid, long menuItemId) {
+		User user = userDao.findById(userid).get();
+		MenuItem menuItem = menuItemDao.findById(menuItemId).get();
+		Cart cart = cartDao.findByUser(user);
+		if(cart.getMenuItemList()==null)
+			cart.getMenuItemList().add(new MenuItem());
+		cart.getMenuItemList().add(menuItem);
+		return cartDao.save(cart);
+	}
+
+	public void removeCartItem(String userId, long menuItemId) throws MenuItemNotFoundException {
+		User user = userDao.findById(userId).get();
+		MenuItem menuItem = menuItemDao.findById(menuItemId).get();
+		cartDao.findByUser(user).getMenuItemList().remove(menuItem);
+		
+	}
+	
+}

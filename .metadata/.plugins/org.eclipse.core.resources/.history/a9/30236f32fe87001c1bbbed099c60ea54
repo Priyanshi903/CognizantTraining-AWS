@@ -1,0 +1,10 @@
+package com.cognizant.truyum.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cognizant.truyum.exception.MenuItemNotFoundException;
+import com.cognizant.truyum.model.Cart;
+
+public interface CartDao extends JpaRepository<Cart, Long>{
+	
+}

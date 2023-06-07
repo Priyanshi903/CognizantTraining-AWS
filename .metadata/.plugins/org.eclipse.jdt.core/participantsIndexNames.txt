@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\aws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\333816732.index
+\employeeMvcClient\src\main\java
+C:\aws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\83033064.index
+\LearnCodeStar2\src\main\java
+C:\aws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3025073612.index
+\truyum-client\src\main\java
+C:\aws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1243712425.index
+\truyum-client\src\main\java

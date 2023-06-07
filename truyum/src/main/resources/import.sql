@@ -1,0 +1,13 @@
+insert into menu_item(id,name,price,active,date_Of_Launch,Category,free_Delivery) values(1,'Sandwich',99.00,true, '2017-03-13','Main Course', true);
+insert into menu_item(id,name,price,active,date_Of_Launch,Category,free_Delivery) values(2, 'Burger',129.00, true,'2017-12-23', 'Main Course', false);
+insert into menu_item(id,name,price,active,date_Of_Launch,Category,free_Delivery) values(3, 'Pizza',149.00, true,'2018-09-21','Main Course', false);
+insert into menu_item(id,name,price,active,date_Of_Launch,Category,free_Delivery) values(4, 'French Fries',57.00, false,'2017-07-02', 'Starters', true);
+insert into menu_item(id,name,price,active,date_Of_Launch,Category,free_Delivery) values(5, 'Chocolate Brownie',32.00, true,'2022-11-02','Dessert', true);
+--insert into cart(cart_id,total) values(101,4000);
+--insert into user(user_name,password,role) values('priyanshi','priya123','Admin');
+--insert into user_cart(username,cart_id) values('priyanshi',101);
+--insert into cart_menu(cart_id,menu_id) values(101,1);
+insert into user(user_name, password,role) values ('mahima', 'abc1','Admin');
+insert into user(user_name, password,role) values ('adyasha', 'abc2','User');
+insert into user(user_name, password) values ('vishal', 'abc3');
+insert into user(user_name, password) values ('pradaap', 'abc4');

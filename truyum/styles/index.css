@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-color: hsl(48, 100%, 50%);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.logo-img {
+  border-radius: 50%;
+  height: 80%;
+  margin-right: 1rem;
+}
+
+.login-Box {
+  position: relative;
+  height: 80vh;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: beige;
+  border-radius: 4px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-Box div {
+  width: 25%;
+  margin-right: 7rem;
+}
+.login-Box div h2 {
+  margin-bottom: 0.4rem;
+}
+
+.Link {
+  display: block;
+  background-color: hsl(48, 100%, 70%);
+  padding: 1rem;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+  color: #000;
+  border-radius: 4px;
+  transition: background-color 600ms;
+}
+
+.Link:hover {
+  background-color: coral;
+}
+
+footer {
+  background-color: hsl(48, 100%, 50%);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.hero-image {
+  height: 100%;
+  width: 60vw;
+  object-fit: cover;
+}

@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+  pre_bulid:
+    commands:
+      - echo Logging in to amazon ECR...
+      - $(aws ecr get-login --no-include-email --region $AWS_REGION)
+  bulid:
+    commands:
+      - echo Bulid started on 'date'
+      - echo Buliding java
+      - cd HelloRepository
+      - mvn clean compile
+      - mvn package
+      - echo Buliding the Docker image
+      - docker bulid -t  .
+      - docker tag

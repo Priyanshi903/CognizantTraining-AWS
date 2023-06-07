@@ -1,0 +1,1 @@
+insert into menu-item values(1, "sandwich", (float)99.00, true, DateUtil.convertToDate("15/03/2017");

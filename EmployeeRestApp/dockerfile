@@ -1,0 +1,4 @@
+FROM openjdk:11.0.3-jdk
+WORKDIR usr/src
+COPY ./target/EmployeeRestApp-1.0.jar ./
+ENTRYPOINT [ "java","-jar","EmployeeRestApp-1.0.jar" ]

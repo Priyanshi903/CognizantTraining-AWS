@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Cart Item</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/474x/8b/4d/99/8b4d99cc5c307b2289f246a02b9b0cec.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../styles/editMenuItem.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <img
+            src="https://i.pinimg.com/474x/8b/4d/99/8b4d99cc5c307b2289f246a02b9b0cec.jpg"
+            alt="Yummy logo"
+            class="logo-img"
+          />
+          <div class="logo">truYum</div>
+        </div>
+        <a href="../Pages/adminPage.html">Menu</a>
+      </nav>
+    </header>
+    <div class="hero" id="hero">
+      <form onsubmit="submitItem()" id="editForm">
+        <label for="name">Name of the Item</label>
+        <input type="text" name="itemName" id="itemName" />
+        <br />
+        <table border="1">
+          <tr>
+            <th>Price</th>
+            <th>Active</th>
+            <th>Date of Launch</th>
+            <th>Category</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="number" name="price" id="price" />
+            </td>
+            <td>
+              <input type="radio" name="active" id="Yes" value="yes" />
+              <label for="active">Yes</label>
+              <input type="radio" name="active" id="No" value="no" />
+              <label for="active">No</label>
+            </td>
+            <td><input type="date" name="dateOfLaunch" id="dateOfLanuch" /></td>
+            <td>
+              <select name="category" id="category">
+                <option value="Starters">Starters</option>
+                <option value="Main Course">Main Course</option>
+                <option value="Icecream">Icecream</option>
+                <option value="Juice">Juice</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <input type="checkbox" name="freeDelivery" id="freeDelivery" />
+        <label for="freeDelivery">Free Delivery</label>
+        <br />
+        <input
+          type="button"
+          onclick="submitItem()"
+          value="Save"
+          class="saveBtn"
+        />
+        <!-- <input type="submit" /> -->
+      </form>
+    </div>
+    <footer>&copy; Copyrights Reserved</footer>
+    <script src="../Js/editItem.js"></script>
+  </body>
+</html>

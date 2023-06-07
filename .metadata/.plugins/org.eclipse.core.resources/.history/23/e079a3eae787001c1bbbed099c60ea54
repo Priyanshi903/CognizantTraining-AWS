@@ -1,0 +1,1 @@
+insert into menu_item(id,name,price,active,date_Of_Launch,Category,freeDelivery) values(1,'Sandwich',99.00,true, '15/03/2017','Starter', true);

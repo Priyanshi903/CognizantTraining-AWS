@@ -1,0 +1,12 @@
+package com.cognizant.truyum.service;
+
+import com.cognizant.truyum.model.User;
+
+public class userService {
+
+	public static void addUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
